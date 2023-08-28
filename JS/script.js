@@ -8,6 +8,9 @@ window.onload = function(){
     if(localStorage.getItem('Theme')){
         body.classList.add('dark-mode');
         mode_btn.classList.toggle('isdark');
+
+        menubtn.classList.toggle('darkbtn');
+
     }
 
     mode_btn.onclick= function(){

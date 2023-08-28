@@ -7,12 +7,21 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
-    width: 95vw;
-    box-sizing: border-box;
+    width: 98vw;
+    height: 100vh;
+    
     font-family: 'Poppins', sans-serif;
     transition: all 1s ease;
+
 }
 
 .dark-mode{
@@ -23,11 +32,12 @@ body{
     color:var(--clr-light);
 }
 #header{
-    width: 95vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 10px 30px;
+    padding: 10px 30px;
     position: fixed;
+    background-color: inherit;
 }
 #logo{
     font-size: 26px;
@@ -92,7 +102,88 @@ body{
     position: relative;
     bottom: 36px;
 }
-@media (max-width:928px){
+
+.home{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+
+}
+.intro-textbox{
+    width: 550px;
+    font-size: 38px;
+}
+.intro-textbox p,.intro-textbox span{
+    /* animation */
+    width:0;
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: .15em; 
+    animation: 
+        typing 1.5s steps(40, end);
+    animation-fill-mode: forwards;
+}
+.intro-textbox p:nth-child(2){
+    animation-delay: 2s;
+}
+.intro-textbox p:nth-child(2){
+    animation-delay: 2s;
+}
+.intro-textbox span{
+    animation-delay: 3.5s;
+}
+.intro-textbox p:nth-child(4){
+    animation-delay: 5s;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.intro-textbox span{
+    display: inline-block;
+    font-weight: 600;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(252,145,69,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+.section{
+    width: 100%;
+    height: 100%;
+    padding: 70px 30px 10px 30px;
+}
+.techstack{
+    display: flex;
+
+   
+}
+.testing{
+    background: gold;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-container{
+    width: 350px;
+    height: 350px;
+}
+
+#profile-photo{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@media only screen and (min-width: 768px) and (max-width: 992px){
     .menubtn{
         display: inline-block;
         margin: 10px;
@@ -103,12 +194,14 @@ body{
     }
     .navlist{
         width: 50%;
-        height: 95vh;
+        height: 100vh;
         position: fixed;
         top:0;
         padding-top: 35px;
         z-index: 99;
+        justify-content: center;
         align-items: center;
+        gap: 60px;
         flex-direction: column;
         background: #131212;
         right: 0;
@@ -134,5 +227,77 @@ body{
         color: var(--clr-light);
     }
 
+    .intro-textbox{
+        font-size: 24px;
+    }
+    .profile-container{
+        width: 200px;
+        height: 200px;
+        
+    }
 }
+@media only screen and (max-width: 600px){
+    .menubtn{
+        display: inline-block;
+        margin: 10px;
+        color: var(--clr-dark);
+    }
+    .darkbtn{
+        color:var(--clr-light);
+    }
+    .navlist{
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        padding-top: 35px;
+        z-index: 99;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        flex-direction: column;
+        background: #131212;
+        right: 0;
+        left: 100%;
+        margin: 0;
+    }
+    .navlist.isactive{
+        left: 50%;
+    }
+    .navlist li:nth-child(8){
+        position: absolute;
+        top:0;
+        right: 25px;
+    }
+    .navlist li:nth-child(9){
+        position: absolute;
+        top:3px;
+        left: 15px;
+        color: var(--clr-light);
+    }
+    .close{
+        display: inline-block;
+        color: var(--clr-light);
+    }
 
+    .home{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 50px;
+    }
+    .intro-textbox{
+        width: 350px;
+        height: 350px;
+        font-size: 18px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-container{
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+    }
+
+}
