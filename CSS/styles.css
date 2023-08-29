@@ -18,12 +18,11 @@ html{
 body{
     width: 98vw;
     height: 100vh;
-    
     font-family: 'Poppins', sans-serif;
     transition: all 1s ease;
+    background-color: var(--clr-light);
 
 }
-
 .dark-mode{
     color:var(--clr-light);
     background-color: var(--clr-dark);
@@ -161,10 +160,8 @@ body{
     height: 100%;
     padding: 70px 30px 10px 30px;
 }
-.techstack{
-    display: flex;
-
-   
+.about{
+    display: flex;  
 }
 .testing{
     background: gold;
@@ -289,7 +286,7 @@ body{
         width: 350px;
         height: 350px;
         font-size: 18px;
-        padding: 30px;
+        padding: 50px;
         display: flex;
         flex-direction: column;
         align-items: center;
