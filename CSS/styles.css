@@ -187,7 +187,6 @@ body{
 .about-container{
     padding: 20px;
     width: 100%;
-    /* background-color: #666; */
 }
 .about-container h2{
     margin: 20px 0px;
@@ -217,6 +216,51 @@ body{
     letter-spacing: 1px;
     font-size: 13px;
 }
+
+.techstack-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.techstack-container .techstack-heading{
+    width: 100%;
+    height: 35%;
+}
+.techstack-container .techstack-heading h2{
+    color: orangered;
+}
+.techstack-container .techstack-heading span{
+    display: inline-block;
+    margin-top: 6px;
+    letter-spacing: 1.2px;
+}
+.techstack-container .logo-container{
+    padding-top: 60px;
+    width: 100%;
+    height: 75%;
+    padding-left: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.techstack-container .logo-container .logo-tile{
+    width: 160px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.techstack-container .logo-container .logo-tile img{
+    width: 60%;
+    height: 60%;
+    filter: brightness(100%);
+    filter: contrast(100%); 
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.708));
+
+} 
+
 
 
 @media only screen and (min-width: 600px) and (max-width: 992px){
@@ -270,6 +314,9 @@ body{
         width: 200px;
         height: 200px;
         
+    }
+    .techstack-container .logo-container .logo-tile img{
+        filter: none;
     }
 }
 @media only screen and (max-width: 600px){
@@ -342,5 +389,15 @@ body{
     .about-container{
         padding: 10px;
         width: 100%;
+    }
+    .techstack-container .logo-container{
+       padding-top: 20%;
+    }
+    .techstack-container .logo-container .logo-tile{
+        width: 40%;
+        height: 30%;
+    }
+    .techstack-container .logo-container .logo-tile img{
+        filter: none;
     }
 }
