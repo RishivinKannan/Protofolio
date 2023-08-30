@@ -242,7 +242,7 @@ body{
     height: 75%;
     padding-left: 30px;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 .techstack-container .logo-container .logo-tile{
@@ -251,6 +251,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.25s ease-in;
+}
+.techstack-container .logo-container .logo-tile:hover{
+    transform: scale(1.2);
 }
 .techstack-container .logo-container .logo-tile img{
     width: 60%;
