@@ -172,6 +172,7 @@ body{
     height: 90%;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .about{
     display: flex;  
@@ -185,7 +186,7 @@ body{
 }
 .about-container{
     padding: 20px;
-    width: 90%;
+    width: 100%;
     /* background-color: #666; */
 }
 .about-container h2{
@@ -194,6 +195,7 @@ body{
 }
 .about-container .about-me p{
     margin-right: 30px;
+    letter-spacing: 1.1px;
 }
 .education .tile{
     margin-top: 15px;
@@ -212,11 +214,12 @@ body{
 }
 .education .tile .institute{
     display: inline-block;
+    letter-spacing: 1px;
     font-size: 13px;
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 992px){
+@media only screen and (min-width: 600px) and (max-width: 992px){
     .menubtn{
         display: inline-block;
         margin: 10px;
@@ -332,5 +335,12 @@ body{
         height: 200px;
         margin-top: 30px;
     }
-
+    .about-container .about-me p{
+        font-size: 15px;
+        margin: 10px 0px;
+    }
+    .about-container{
+        padding: 10px;
+        width: 100%;
+    }
 }
