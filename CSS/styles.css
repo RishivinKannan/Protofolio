@@ -159,7 +159,7 @@ body{
 }
 .section{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     padding: 75px 30px 10px 30px;
 }
 
@@ -241,7 +241,7 @@ body{
     padding-top: 60px;
     width: 100%;
     height: 75%;
-    padding-left: 30px;
+    padding-left: 50px;
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
@@ -294,17 +294,20 @@ body{
     align-items: center;
     flex-wrap: wrap;
 }
+.dark-card{
+    background-color: #363636;
+}
 .project-card{
     margin-top: 10px;
     width: 265px;
-    height: 380px;
+    height: 390px;
     border-radius: 20px;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transition: all 0.25s ease-in;
 }
 .project-card:hover{
-    transform: scale(1.1);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .project-card .card-img{
     width: 100%;
@@ -318,34 +321,40 @@ body{
     border-top-right-radius: 20px;    
 
 }
+.card-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
 .card-body h5{
     text-align: center;
+    font-size: 14px;
     letter-spacing: 1.2px;
-    margin: 10px;
+    margin: 10px 5px;
 }
 .card-body p{
     font-size: small;
-    margin-left: 5px;
-    margin-top: 10px;
-    padding-left:15px;
-    padding-right:15px;
+    /* margin-left: 5px;
+    margin-top: 10px; */
+    padding-left:20px;
+    padding-right:20px;
     letter-spacing: 1px;
+    text-align: justify;
 }
 .card-body span{
+    display: inline-block;
     font-size: 12px;
-    margin-left: 5px;
-    margin-top: 10px;
-    padding-left:15px;
-    padding-right:15px;
+    margin-top: 5px;
     letter-spacing: 0.5px;
+    text-align: start;
 }
 .glink img{
     width: 18px;
     height: 18px;
-    color: orangered;
 }
 .glink a{
-    color: orangered;
+    color: rgb(253, 97, 40);
 }
 .glink{
     display: flex;
@@ -354,9 +363,8 @@ body{
     gap: 5px;
     font-size: 12px;
     position: relative;
-    top: 10px;
-    left: 60px;
-
+    top: 3px;
+    left: 65px;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 992px){
@@ -411,6 +419,7 @@ body{
         height: 200px;
         
     }
+    
 }
 @media only screen and (max-width: 600px){
     .menubtn{
@@ -489,5 +498,28 @@ body{
     .techstack-container .logo-container .logo-tile{
         width: 40%;
         height: 30%;
+    }
+}
+@media only screen and (max-width: 350px){
+    .card-body h5{
+        margin-top: 10px;
+        font-size: 12px;
+        letter-spacing: 1.1px;
+    }
+    .card-body p{
+        margin-top: 10px;
+        font-size:10px;
+        letter-spacing: 1px;
+    }
+    .card-body span{
+        margin-top: 10px;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+    .glink{
+        gap: 5px;
+        font-size: 10px;
+        top: 13px;
+        left: 0px;
     }
 }
