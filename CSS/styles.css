@@ -596,9 +596,15 @@ body{
         letter-spacing: 1.1px;
     }
     .contact-section footer span{
-    font-size: 0.7rem;
-    font-weight: 300;
-    letter-spacing: 1px;
+        text-align: center;
+        margin-left: 10px;
+        font-size: 0.7rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+    .contact-section footer{
+        justify-content: space-around;
+        flex-direction: column-reverse;
     }
 }
 
