@@ -25,13 +25,9 @@ body{
     background-color: var(--clr-light);
 
 }
-.dark-mode{
-    color:var(--clr-light);
-    background-color: var(--clr-dark);
-}
-.darkbtn{
-    color:var(--clr-light);
-}
+
+/* ----------------------------HEADER------------------------------ */
+
 #header{
     width: 100%;
     display: flex;
@@ -41,18 +37,16 @@ body{
     z-index: 999;
     background-color: inherit;
 }
+
 #logo{
     font-size: 26px;
     letter-spacing: 1.5px;
     font-weight: 500;
     margin: 5px;
 }
-.btn, .menubtn{
-    display: none;
-    border: none;
-    background: none;
-    color: var(--clr-light);
-}
+
+
+/* ----------------------------NAVIGATION LIST------------------------------ */
 .navlist{
     display: flex;
     justify-content: space-around;
@@ -79,6 +73,14 @@ body{
     width: 28px;
 }
 
+/* ----------------------------HEADER BUTTONS------------------------------ */
+
+.btn, .menubtn{
+    display: none;
+    border: none;
+    background: none;
+    color: var(--clr-light);
+}
 .themebtn{
     width: 38px;
     height: 38px;
@@ -104,7 +106,7 @@ body{
     position: relative;
     bottom: 36px;
 }
-
+/* ----------------------------HOME PAGE------------------------------ */
 .home{
     display: flex;
     justify-content: space-around;
@@ -112,10 +114,12 @@ body{
     padding-top: 30px;
 
 }
+/* ----------------------------TEXT BOX------------------------------ */
 .intro-textbox{
     width: 550px;
     font-size: 38px;
 }
+
 .intro-textbox p,.intro-textbox span{
     /* animation */
     width:0;
@@ -139,14 +143,8 @@ body{
 .intro-textbox p:nth-child(4){
     animation-delay: 5s;
 }
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
+
+
 
 .intro-textbox span{
     display: inline-block;
@@ -158,12 +156,17 @@ body{
     -moz-background-clip: text;
     background-clip: text;
 }
-.section{
-    width: 100%;
-    min-height: 100%;
-    padding: 75px 30px 10px 30px;
+/* ----------------------------TYPING ANIMATIONS KEYFRAME------------------------------ */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
 
+/* ----------------------------PROFILE PHOTO------------------------------ */
 .profile-container{
     width: 350px;
     height: 350px;
@@ -176,20 +179,18 @@ body{
     object-fit: cover;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+
+/* ----------------------------ABOUT PAGE------------------------------ */
 .about{
     display: flex;  
     justify-content: center;
     align-items: center;
 }
-.testing{
-    background: gold;
-    width: 100%;
-    height: 100%;
-}
 .about-container{
     padding: 10px 20px;
     width: 100%;
 }
+/* ----------------------------ABOUT ME CARD ------------------------------ */
 .about-container h2{
     margin: 20px 0px;
     color: orangered;
@@ -198,6 +199,8 @@ body{
     margin-right: 30px;
     letter-spacing: 1.1px;
 }
+
+/* ----------------------------EDUCATION TITLES------------------------------ */
 .education .tile{
     margin-top: 15px;
     padding-bottom: 10px;
@@ -219,6 +222,8 @@ body{
     font-size: 13px;
 }
 
+
+/* ----------------------------TECHSTACK PAGE------------------------------ */
 .techstack-container{
     padding: 20px;
     display: flex;
@@ -226,6 +231,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+/* ----------------------------TECHSTACK HEADING------------------------------ */
 .techstack-container .techstack-heading{
     width: 100%;
     height: 35%;
@@ -238,6 +244,8 @@ body{
     margin-top: 6px;
     letter-spacing: 1.2px;
 }
+
+/* ----------------------------LOGO CONTAINER------------------------------ */
 .techstack-container .logo-container{
     padding-top: 60px;
     width: 100%;
@@ -269,6 +277,7 @@ body{
 
 } 
 
+/* ----------------------------PROJECT PAGE------------------------------ */
 .project-container{
     padding: 20px;
     padding-top: 10px;
@@ -277,7 +286,7 @@ body{
     justify-content: center;
     gap:15px
 }
-
+/* ----------------------------PROJECT HEADING------------------------------ */
 .project-heading{
     width: 100%;
 }
@@ -289,17 +298,15 @@ body{
     margin-top: 6px;
     letter-spacing: 1.2px;
 }
+
+/* ----------------------------PROJECT CARDS------------------------------ */
 .card-container{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-.dark-card{
-    background-color: #363636;
-    --color-light: #fff;
 
-}
 .project-card{
     margin: 10px;
     width: 265px;
@@ -312,6 +319,8 @@ body{
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
+/* ----------------------------PROJECT CARD THEME------------------------------ */
 .project-card .card-img{
     width: 100%;
     height: 45%;
@@ -328,6 +337,7 @@ body{
 .project-card .white-img,.project-card.dark-card .dark-img{
     display: none;
 }
+
 .card-img img{
     width: 100%;
     height: 100%;
@@ -337,6 +347,7 @@ body{
     filter: brightness(80%);   
 
 }
+/* ----------------------------CARD BODY------------------------------ */
 .card-body{
     display: flex;
     padding: 0.5em;
@@ -367,6 +378,7 @@ body{
     letter-spacing: 0.5px;
     text-align: start;
 }
+/* ----------------------------VIEW CODE LINK------------------------------ */
 .glink img{
     width: 18px;
     height: 18px;
@@ -387,6 +399,8 @@ body{
     top: 5px;
     left: 60px;
 }
+
+/* ----------------------------CONTACT PAGE------------------------------ */
 .contact-section{
     width: 100%;
     height: 100%;
@@ -396,6 +410,7 @@ body{
     flex-direction: column;
     position: absolute;
 }
+
 .contact-section .contact-body{
     width: 100%;
     height: 85%;
@@ -418,6 +433,8 @@ body{
     -moz-background-clip: text;
     background-clip: text;
 }
+
+/* ----------------------------FOOTER------------------------------ */
 .contact-section footer{
     width: 100%;
     height: 15%;
@@ -426,7 +443,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background: red; */
     position: relative;
     bottom: 0;
     border-top: 0.5px solid #82828273;
@@ -445,6 +461,30 @@ body{
     height: 28px;
     width: 28px;
 }
+
+/* ----------------------------UTILITIES CLASS------------------------------ */
+.dark-mode{
+    color:var(--clr-light);
+    background-color: var(--clr-dark);
+}
+.darkbtn{
+    color:var(--clr-light);
+}
+.section{
+    width: 100%;
+    min-height: 100%;
+    padding: 75px 30px 10px 30px;
+}
+.dark-card{
+    background-color: #363636;
+    --color-light: #fff;
+
+}
+
+
+/* ----------------------------MEDIA QUERYS BREAK POINTS------------------------------ */
+
+/* ----------------------------MEDIUM------------------------------ */
 @media only screen and (min-width: 600px) and (max-width: 992px){
     .menubtn{
         display: inline-block;
@@ -508,6 +548,7 @@ body{
     }
     
 }
+/* ----------------------------SMALL------------------------------ */
 @media only screen and (max-width: 600px){
     .menubtn{
         display: inline-block;
@@ -607,7 +648,7 @@ body{
         flex-direction: column-reverse;
     }
 }
-
+/* ----------------------------EXTRA SMALL------------------------------ */
 @media only screen and (max-width: 350px){
     .card-body h5{
         margin-top: 10px;

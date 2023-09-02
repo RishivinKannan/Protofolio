@@ -1,4 +1,6 @@
 window.onload = function(){
+
+    // DEFINING ELEMENTS
     const mode_btn = document.querySelector('#mode');
     const body = document.querySelector('body');
 
@@ -8,6 +10,7 @@ window.onload = function(){
 
     const projectcard = document.getElementsByClassName('project-card');
 
+    // CHECKING THEME PEFERENCE
     if(localStorage.getItem('Theme')){
         body.classList.add('dark-mode');
         mode_btn.classList.toggle('isdark');
@@ -18,6 +21,7 @@ window.onload = function(){
         
     }
 
+    //ONCLICK EVENTS
     mode_btn.onclick= function(){
         mode_btn.classList.toggle('isdark');
         menubtn.classList.toggle('darkbtn');
@@ -26,6 +30,7 @@ window.onload = function(){
             projectcard[i].classList.toggle('dark-card');
         }
 
+        // STORING THE PEFERENCE
         if( body.classList.contains('dark-mode')){
             localStorage.setItem('Theme','dark-mode');
         }
@@ -34,6 +39,7 @@ window.onload = function(){
         }
     }
 
+    // MENU BUTTON ONCLICK EVENTS
     menubtn.addEventListener('click',function(){
         navlist.classList.toggle('isactive');
     });

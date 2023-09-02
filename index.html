@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <script  type="application/javascript" src="JS/script.js"></script>
+    <link rel="stylesheet" href="CSS/styles.min.css">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 </head>
 <body>
+
+    <!-- ------------------------------------------------header------------------------------------------------ -->
     <section id="header" class="header">
         <span id="logo">PORTFOLIO</span>
+
         <nav class="nav">
+            <!-- -----------Small-screen Navigation Mobile Btn------------------ -->
             <button class="menubtn btn">
                 <span class="material-symbols-outlined">
                     menu
                 </span>
             </button>
+
             <ul class="navlist">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#techstack">Techstack</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+
                 <li><a href="https://github.com/RishivinKannan/" target="_blank"><img src="images/TechStackIcons/icons8-github.svg" alt="github"></a></li>
                 <li><a href="https://www.linkedin.com/in/rishivin-kannan" target="_blank"><img src="images/TechStackIcons/icons8-linkedin-circled.svg" alt="linkedin"></a></li>
+                
+                <!-- ---------Theme btn----------- -->
                 <li><div class="themebtn isdark" id="mode">
                     <img id="lighticon" src="images/theme icon/icons8-sun.svg" alt=""> 
                     <img id="darkicon" src="images/theme icon/icons8-dark-30.png" alt="">
@@ -36,18 +44,21 @@
         </nav>
     </section>
 
+    <!-- ---------------------------Home Page--------------------------------------------- -->
 
     <section id="home" class="home section">
         <div class="intro-textbox">
             <p>Hey,</p><p>My name is</p><span>Rishivin Kannan R</span><p>I build things for web</p>
         </div>
         <div class="profile-container">
-            <img src="images/Profile/profile.png" alt="" id="profile-photo">
+            <img  src="images/Profile/profile.png" alt="" id="profile-photo">
         </div>
     </section>
 
+    <!-- --------------------------------About page--------------------------------------------- -->
     <section class="about section" id="about">
         <div class="about-container">
+            <!-- ------------------------About---------------------- -->
             <div class="about-me card">
                 <h2>About Me</h2>
                 <p>Aspiring developer with astrong foundation in
@@ -56,6 +67,7 @@
                     my skills and learn from experienced professionals in a dynamic
                     team environment.</p>
             </div>
+            <!-- -------------------------Tiles---------------- -->
             <div class="education card">
                 <h2>Education</h2>
                 <div class="tile">
@@ -73,12 +85,18 @@
             </div>
         </div>
     </section>
+
+    <!-- --------------------Techstack Page---------------------- -->
+
     <section class="section techstack" id="techstack">
         <div class="techstack-container ">
+            <!-- --------------Heading--------- -->
             <div class="techstack-heading">
                 <h2>My Tech Stack</h2>
                 <Span>Technologies I've been working with recently</Span>
             </div>
+
+            <!-- --------------Logos--------- -->
             <div class="logo-container">
                 <div class="logo-tile">
                     <img src="images/TechStackIcons/icons8-html-logo.svg" alt="HTML">
@@ -119,12 +137,15 @@
             </div>
         </div>
     </section>
+    <!-- -------------Project Page-------------------- -->
     <section class="project-section section" id="projects">
         <div class="project-container ">
+            <!-- --------------Heading--------- -->
             <div class="project-heading">
                 <h2>Projects</h2>
                 <Span>Things I've built so far</Span>
             </div>
+            <!-- ---------------Project cards--------------- -->
             <div class="card-container">
                 <div class="project-card">
                     <div class="card-img">
@@ -174,6 +195,7 @@
         </div>
     </section>
 
+    <!-- --------------------Contact Page-------------------- -->
     <section class="contact-section section" id="contact">
         <div class="contact-body">
             <h1>To contact me, please mail @</h1>
@@ -181,6 +203,7 @@
         </div>
         <footer>
             <span>Designed and built by Rishivin Kannan R</span>
+            <!-- -------links-------- -->
             <ul>
                 <li><a href="https://www.instagram.com/_r.r.k.__/" target="_blank"><img src="images/contact/icons8-instagram-logo.svg" alt="instagram"></a></li>
                 <li><a href="" target="_blank"><img  src="images/contact/icons8-twitter-logo.svg" alt="twitter"></a></li>
@@ -190,5 +213,9 @@
             </ul>
         </footer>
     </section>
+
+
+    <!-- -------------------------javascript------------------------- -->
+    <script  type="application/javascript" src="JS/script.min.js"></script>
 </body>
 </html>
