@@ -116,11 +116,15 @@ body{
 }
 /* ----------------------------TEXT BOX------------------------------ */
 .intro-textbox{
-    width: 550px;
+    width: 600px;
     font-size: 38px;
 }
-
-.intro-textbox p,.intro-textbox span{
+.intro-textbox .text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.intro-textbox .text span{
     /* animation */
     width:0;
     overflow: hidden; 
@@ -128,25 +132,25 @@ body{
     margin: 0;
     letter-spacing: .15em; 
     animation: 
-        typing 1.5s steps(40, end);
+        typing 2s steps(40, end);
     animation-fill-mode: forwards;
 }
-.intro-textbox p:nth-child(2){
+.intro-textbox span:nth-child(2){
     animation-delay: 2s;
 }
-.intro-textbox p:nth-child(2){
+.intro-textbox span:nth-child(2){
     animation-delay: 2s;
 }
-.intro-textbox span{
+.intro-textbox span:nth-child(3){
     animation-delay: 3.5s;
 }
-.intro-textbox p:nth-child(4){
+.intro-textbox span:nth-child(4){
     animation-delay: 5s;
 }
 
 
 
-.intro-textbox span{
+.intro-textbox span:nth-child(3){
     display: inline-block;
     font-weight: 600;
     background: rgb(131,58,180);
@@ -161,7 +165,7 @@ body{
     from { width: 0 }
     to { width: 100% }
   }
-  @keyframes blink-caret {
+@keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
