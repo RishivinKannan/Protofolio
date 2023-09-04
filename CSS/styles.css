@@ -10,9 +10,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    user-select: none;
 }
 html{
     scroll-behavior: smooth;
@@ -23,6 +23,7 @@ body{
     font-family: 'Poppins', sans-serif;
     transition: all 1s ease;
     background-color: var(--clr-light);
+    overflow-x: hidden;
 
 }
 
@@ -126,32 +127,39 @@ body{
 }
 .intro-textbox .text span{
     /* animation */
-    width:0;
+    opacity:0;
     overflow: hidden; 
     white-space: nowrap; 
     margin: 0;
     letter-spacing: .15em; 
     animation: 
-        typing 2s steps(40, end);
+        typing 2s steps(40),
+        blink-caret 2s step-end,
+        opac 1s linear;
     animation-fill-mode: forwards;
 }
-.intro-textbox span:nth-child(2){
+.intro-textbox span:nth-child(1){
+    width: 4ch;
+    animation-duration: 1s;
     animation-delay: 2s;
 }
 .intro-textbox span:nth-child(2){
-    animation-delay: 2s;
+    width: 12ch;
+    animation-delay: 3s;
 }
 .intro-textbox span:nth-child(3){
-    animation-delay: 3.5s;
-}
-.intro-textbox span:nth-child(4){
+    width: 19ch;
     animation-delay: 5s;
 }
+.intro-textbox span:nth-child(4){
+    width: 22ch;
+    animation-delay: 7s;
+}
 
 
 
 .intro-textbox span:nth-child(3){
-    display: inline-block;
+    display: inline;
     font-weight: 600;
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(252,145,69,1) 100%);
@@ -161,13 +169,16 @@ body{
     background-clip: text;
 }
 /* ----------------------------TYPING ANIMATIONS KEYFRAME------------------------------ */
+@keyframes opac {
+    from { opacity: 1;}
+    to {opacity: 1;}
+}
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from { width: 0;}
   }
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  0%,10%,20%,30%,40%,50%,60%,70%,80%,90%,100%{ border-right: .15em solid transparent; }
+  5%,15%,25%,35%,45%,55%,65%,75%,85%,95%{ border-color: orange; }
 }
 
 /* ----------------------------PROFILE PHOTO------------------------------ */
@@ -194,6 +205,7 @@ body{
     padding: 10px 20px;
     width: 100%;
 }
+
 /* ----------------------------ABOUT ME CARD ------------------------------ */
 .about-container h2{
     margin: 20px 0px;
@@ -202,6 +214,13 @@ body{
 .about-container .about-me p{
     margin-right: 30px;
     letter-spacing: 1.1px;
+}
+.about-container.hidden .about-me{
+    transform: translate(-100%);
+    transition: transform 1.5s ease-in-out;
+}
+.about-container.show .about-me{
+    transform: translate(0);
 }
 
 /* ----------------------------EDUCATION TITLES------------------------------ */
@@ -225,7 +244,13 @@ body{
     letter-spacing: 1px;
     font-size: 13px;
 }
-
+.about-container.hidden .education{
+    transform: translate(100%);
+    transition: transform 1.5s ease-in-out;
+}
+.about-container.show .education{
+    transform: translate(0);
+}
 
 /* ----------------------------TECHSTACK PAGE------------------------------ */
 .techstack-container{
@@ -269,9 +294,7 @@ body{
     transition: 0.25s ease-in;
 
 }
-.techstack-container .logo-container .logo-tile:hover{
-    transform: scale(1.2);
-}
+
 .techstack-container .logo-container .logo-tile img{
     width: 60%;
     height: 60%;
@@ -280,6 +303,16 @@ body{
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.708)); */
 
 } 
+.techstack-container.hidden .logo-container .logo-tile{
+    opacity: 0;
+    transform: scale(0.6);
+    transition: all 1s ease-in;
+    transition-delay: 0.2s;
+}
+.techstack-container.show .logo-container .logo-tile{
+    opacity: 1;
+    transform: scale(1);
+}
 
 /* ----------------------------PROJECT PAGE------------------------------ */
 .project-container{
@@ -485,7 +518,14 @@ body{
     --color-light: #fff;
 
 }
-
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* ----------------------------MEDIA QUERYS BREAK POINTS------------------------------ */
 
