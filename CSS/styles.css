@@ -216,7 +216,7 @@ body{
 }
 .about-container.hidden .about-me{
     transform: translate(-100%);
-    transition: transform 1.5s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 .about-container.show .about-me{
     transform: translate(0);
@@ -244,8 +244,8 @@ body{
     font-size: 13px;
 }
 .about-container.hidden .education{
-    transform: translate(100%);
-    transition: transform 1.5s ease-in-out;
+    transform: translate(200%);
+    transition: transform 2s ease-in-out;
 }
 .about-container.show .education{
     transform: translate(0);
