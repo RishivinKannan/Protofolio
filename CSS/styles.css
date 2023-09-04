@@ -24,7 +24,6 @@ body{
     transition: all 1s ease;
     background-color: var(--clr-light);
     overflow-x: hidden;
-
 }
 
 /* ----------------------------HEADER------------------------------ */
@@ -520,7 +519,7 @@ body{
 }
 .hidden{
     opacity: 0;
-    transition: all 2s;
+    transition: all 1.5s;
 }
 .show{
     opacity: 1;
