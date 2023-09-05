@@ -138,7 +138,7 @@ body{
     animation-fill-mode: forwards;
 }
 .intro-textbox span:nth-child(1){
-    width: 4ch;
+    width: 5ch;
     animation-duration: 1s;
     animation-delay: 2s;
 }
@@ -216,7 +216,7 @@ body{
 }
 .about-container.hidden .about-me{
     transform: translate(-100%);
-    transition: transform 1s ease-in-out;
+    transition: transform 0.7s ease-in-out;
 }
 .about-container.show .about-me{
     transform: translate(0);
@@ -245,7 +245,7 @@ body{
 }
 .about-container.hidden .education{
     transform: translate(200%);
-    transition: transform 2s ease-in-out;
+    transition: transform 1.4s ease-in-out;
 }
 .about-container.show .education{
     transform: translate(0);
@@ -349,14 +349,25 @@ body{
     height: 390px;
     border-radius: 20px;
     box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.20);
-    transition: transform  0.25s ease-in;
     transition: background-color 1s ease-in;
 }
+
 .project-card:hover{
-    transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-
+.project-card.hidden{
+    transform: translate(-100%);
+    transition: transform  1.2s ease;
+}
+.project-card.show{
+    transform: translate(0);
+}
+.project-card.show:nth-child(2){
+    transition-delay: 0.2s;
+}
+.project-card.show:nth-child(3){
+    transition-delay: 0.3s;
+}
 /* ----------------------------PROJECT CARD THEME------------------------------ */
 .project-card .card-img{
     width: 100%;
@@ -519,7 +530,7 @@ body{
 }
 .hidden{
     opacity: 0;
-    transition: all 1.5s;
+    transition: opacity 1.5s;
 }
 .show{
     opacity: 1;
@@ -589,6 +600,9 @@ body{
     .contact-body span{
         font-size: 1.5rem;
         letter-spacing: 1.1px;
+    }
+    .project-card.show:nth-child(3){
+        transition-delay: 0;
     }
     
 }
@@ -691,6 +705,19 @@ body{
         justify-content: space-around;
         flex-direction: column-reverse;
     }
+
+    .project-card.hidden:nth-child(2){
+        transform: translate(130%);
+        transition: transform 1s ease;
+    }
+
+    .project-card.show:nth-child(2){
+        transform: translate(0%);
+        transition-delay: 0;
+    }
+    .project-card.show:nth-child(3){
+        transition-delay: 0;
+     }
 }
 /* ----------------------------EXTRA SMALL------------------------------ */
 @media only screen and (max-width: 350px){
