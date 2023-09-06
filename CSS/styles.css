@@ -18,7 +18,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    width: 98vw;
+    max-width: 98vw;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     transition: all 1s ease;
@@ -707,13 +707,14 @@ body{
     }
 
     .project-card.hidden:nth-child(2){
-        transform: translate(130%);
+        transform: translate(100%);
         transition: transform 1s ease;
+        transition-delay: 0;
     }
 
     .project-card.show:nth-child(2){
         transform: translate(0%);
-        transition-delay: 0;
+
     }
     .project-card.show:nth-child(3){
         transition-delay: 0;
